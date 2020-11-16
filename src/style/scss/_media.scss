@@ -1,0 +1,111 @@
+@media (max-width: 500px) {
+  #header {
+    #main-nav {
+      ul {
+        li {
+          padding: 0.3rem 0.4rem 0;
+        }
+      }
+    }
+  }
+
+  #galleries {
+    .container {
+      flex-direction: column;
+      margin: 0 30px;
+      .galleries-mylife {
+        line-height: 200px;
+        height: 200px;
+      }
+      .galleries-media {
+        height: 200px;
+        line-height: 200px;
+      }
+    }
+  }
+  #about {
+    .about {
+      .about-content {
+        display: block;
+
+        .about-image {
+          width: 100%;
+          height: 400px;
+          margin-bottom: 30px;
+        }
+        .about-text {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  #contact {
+    background: $background-image no-repeat center right/cover;
+    min-height: calc(100vh - 113px);
+    background-attachment: fixed;
+    margin-top: 110px;
+
+    .contact {
+      min-height: 500px;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 30px;
+      margin-bottom: 30px;
+
+      .contact-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+      }
+    }
+  }
+
+  #blog {
+    background: $background-image no-repeat center right/cover;
+    min-height: calc(100vh - 113px);
+    background-attachment: fixed;
+    margin-top: 110px;
+
+    .blog {
+      background: rgba(255, 255, 255, 0.85);
+      padding: 30px;
+      margin-bottom: 30px;
+
+      .blog-page-title {
+        display: block;
+        font-size: 2rem;
+        border-bottom: 2px solid black;
+        margin-bottom: 20px;
+      }
+
+      .blog-content {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  #showreel {
+    .showreel {
+      .showreel-content {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  #login {
+    .login {
+      padding: 30px 30px;
+      margin-bottom: 30px;
+    }
+  }
+
+  #admin {
+    .admin {
+      padding: 30px 30px;
+      margin-bottom: 30px;
+    }
+  }
+}

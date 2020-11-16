@@ -1,0 +1,531 @@
+@import url(~react-image-gallery/styles/css/image-gallery.css);
+.container {
+  max-width: 1024px;
+  padding: 0 1.5rem;
+  margin: auto;
+  overflow: hidden; }
+
+.my-1 {
+  margin: 30px 0; }
+
+.btn {
+  height: 3rem;
+  width: 100%;
+  text-align: center;
+  background: #756464;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1.5rem;
+  margin-bottom: 1rem;
+  cursor: pointer; }
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  font-family: 'Oswald', sans-serif;
+  padding-left: 10px; }
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  font-family: 'Oswald', sans-serif;
+  padding-left: 10px; }
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  font-family: 'Oswald', sans-serif;
+  padding-left: 10px; }
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  font-family: 'Oswald', sans-serif;
+  padding-left: 10px; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Oswald', sans-serif; }
+
+ul {
+  list-style: none; }
+
+img {
+  width: 100%; }
+
+a,
+a:active {
+  text-decoration: none;
+  color: inherit; }
+
+#header {
+  position: fixed;
+  top: 0;
+  background-color: white;
+  height: 110px;
+  width: 100%;
+  border-bottom: 3px #756464 solid;
+  overflow: hidden; }
+  #header #main-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    #header #main-nav .nav-name {
+      font-size: 2.6rem;
+      width: 100%;
+      text-align: center; }
+    #header #main-nav ul {
+      display: flex;
+      list-style: none;
+      align-items: center;
+      justify-content: center; }
+      #header #main-nav ul li {
+        margin: 0.5rem 0.3rem 0 0;
+        padding: 0.3rem 0.8rem 0;
+        font-size: 0.8rem;
+        border-top: 1px #756464 solid;
+        text-transform: uppercase; }
+      #header #main-nav ul li:hover {
+        border-top: 3px #756464 solid; }
+      #header #main-nav ul .active {
+        border-top: 3px #756464 solid; }
+    #header #main-nav a {
+      text-decoration: none; }
+
+#home {
+  background: url("../images/muhammetgok_home.jpg") no-repeat center right/cover;
+  min-height: calc(100vh - 113px);
+  margin-top: 110px; }
+  #home .quote {
+    position: absolute;
+    margin-right: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    max-width: 500px;
+    top: 30%;
+    font-size: 2rem; }
+
+#galleries {
+  background: url("../images/background-image.jpg") no-repeat center right/cover;
+  min-height: calc(100vh - 113px);
+  background-attachment: fixed;
+  margin-top: 110px; }
+  #galleries .container {
+    display: flex;
+    font-size: 4rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center; }
+    #galleries .container .galleries-mylife {
+      width: 512px;
+      background: white;
+      line-height: 480px;
+      height: 500px; }
+    #galleries .container .galleries-media {
+      height: 500px;
+      line-height: 480px;
+      width: 512px;
+      background: black;
+      color: white; }
+    #galleries .container a {
+      text-decoration: none;
+      color: #fff; }
+
+#about {
+  background: url("../images/background-image.jpg") no-repeat center right/cover;
+  min-height: calc(100vh - 113px);
+  background-attachment: fixed;
+  margin-top: 110px; }
+  #about .about {
+    min-height: 600px;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    padding-right: 30px;
+    margin-bottom: 30px; }
+    #about .about .about-title {
+      display: block;
+      font-size: 2rem;
+      border-bottom: 2px solid black;
+      margin-bottom: 20px; }
+    #about .about .about-content {
+      display: flex; }
+      #about .about .about-content .about-image {
+        background: url("../images/about.jpg") no-repeat center right/cover;
+        border: 8px solid #efefef;
+        margin-right: 30px;
+        flex: 1 1 0;
+        width: 0; }
+      #about .about .about-content .about-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1 1 0;
+        width: 0; }
+        #about .about .about-content .about-text .about-content {
+          font-weight: 400; }
+        #about .about .about-content .about-text .mg-text {
+          margin-right: 30px;
+          font-size: 5rem;
+          text-align: right; }
+
+#contact {
+  background: url("../images/background-image.jpg") no-repeat center right/cover;
+  min-height: calc(100vh - 113px);
+  background-attachment: fixed;
+  margin-top: 110px; }
+  #contact .contact {
+    min-height: 500px;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    margin-bottom: 30px; }
+    #contact .contact .contact-title {
+      display: block;
+      font-size: 2rem;
+      border-bottom: 2px solid black;
+      margin-bottom: 20px; }
+    #contact .contact .contact-content {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-gap: 1rem; }
+      #contact .contact .contact-content .contact-info {
+        line-height: 3rem;
+        font-size: 1.5rem; }
+        #contact .contact .contact-content .contact-info .icons {
+          margin-top: 15px;
+          margin-right: 10px; }
+      #contact .contact .contact-content .contact-form .text-fields {
+        display: grid;
+        grid-gap: 0.5rem;
+        margin-bottom: 1.2rem; }
+        #contact .contact .contact-content .contact-form .text-fields .text-input {
+          height: 2.5rem;
+          border: 1px solid;
+          border-radius: 5px; }
+        #contact .contact .contact-content .contact-form .text-fields .message-input {
+          height: 6rem;
+          border: 1px solid;
+          border-radius: 5px; }
+      #contact .contact .contact-content .contact-form .btn {
+        height: 3rem;
+        width: 100%;
+        text-align: center;
+        background: #756464;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 0.5rem 1.5rem; }
+
+#blog {
+  background: url("../images/background-image.jpg") no-repeat center right/cover;
+  min-height: calc(100vh - 113px);
+  background-attachment: fixed;
+  margin-top: 110px; }
+  #blog .blog {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    margin-bottom: 30px; }
+    #blog .blog .blog-page-title {
+      display: block;
+      font-size: 2rem;
+      border-bottom: 2px solid black;
+      margin-bottom: 20px; }
+    #blog .blog .blog-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1rem; }
+      #blog .blog .blog-content .blog-column {
+        display: flex;
+        flex-direction: column;
+        width: 100%; }
+        #blog .blog .blog-content .blog-column a {
+          text-decoration: none;
+          color: black; }
+        #blog .blog .blog-content .blog-column .blog-column-item {
+          background: white;
+          margin-bottom: 30px;
+          padding-bottom: 20px; }
+          #blog .blog .blog-content .blog-column .blog-column-item .blog-image {
+            background: url("../images/background-image.jpg") no-repeat center right/cover;
+            width: 100%;
+            height: 250px; }
+          #blog .blog .blog-content .blog-column .blog-column-item .blog-title {
+            font-size: 2rem;
+            margin: 15px 30px; }
+          #blog .blog .blog-content .blog-column .blog-column-item .blog-text {
+            margin: 15px 30px; }
+
+#showreel {
+  background: url("../images/background-image.jpg") no-repeat center right/cover;
+  min-height: calc(100vh - 113px);
+  background-attachment: fixed;
+  margin-top: 110px; }
+  #showreel .showreel {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    margin-bottom: 30px; }
+    #showreel .showreel .showreel-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1rem; }
+    #showreel .showreel .showreel-title {
+      display: block;
+      font-size: 2rem;
+      border-bottom: 2px solid black;
+      margin-bottom: 20px; }
+
+#login {
+  background: url("../images/background-image.jpg") no-repeat center right/cover;
+  min-height: calc(100vh - 113px);
+  background-attachment: fixed;
+  margin-top: 110px; }
+  #login .login {
+    min-height: 500px;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 30px 300px;
+    margin-bottom: 30px; }
+    #login .login .login-title {
+      display: block;
+      font-size: 2rem;
+      border-bottom: 2px solid black;
+      margin-bottom: 20px; }
+    #login .login .text-fields {
+      display: grid;
+      grid-gap: 0.5rem;
+      margin-bottom: 1.2rem; }
+      #login .login .text-fields .text-input {
+        height: 2.5rem;
+        border: 1px solid;
+        border-radius: 5px; }
+
+#admin {
+  background: url("../images/background-image.jpg") no-repeat center right/cover;
+  min-height: calc(100vh - 113px);
+  background-attachment: fixed;
+  margin-top: 110px; }
+  #admin .admin {
+    min-height: 700px;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 30px 300px;
+    margin-bottom: 30px; }
+    #admin .admin .admin-title {
+      display: block;
+      font-size: 2rem;
+      border-bottom: 2px solid black;
+      margin-bottom: 20px; }
+    #admin .admin .btn-error {
+      background: #d1244f; }
+
+#gallery {
+  background: url("../images/background-image.jpg") no-repeat center right/cover;
+  min-height: calc(100vh - 113px);
+  background-attachment: fixed;
+  margin-top: 110px; }
+  #gallery .gallery {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    margin-bottom: 30px; }
+    #gallery .gallery .gallery-page-title {
+      display: block;
+      font-size: 2rem;
+      border-bottom: 2px solid black;
+      margin-bottom: 20px; }
+
+#create-showreel {
+  background: url("../images/background-image.jpg") no-repeat center right/cover;
+  min-height: calc(100vh - 113px);
+  background-attachment: fixed;
+  margin-top: 110px; }
+  #create-showreel .create-showreel {
+    min-height: 500px;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    margin-bottom: 30px; }
+    #create-showreel .create-showreel .create-showreel-title {
+      display: block;
+      font-size: 2rem;
+      border-bottom: 2px solid black;
+      margin-bottom: 20px; }
+    #create-showreel .create-showreel .create-showreel-info {
+      line-height: 3rem;
+      font-size: 1.5rem; }
+    #create-showreel .create-showreel .create-showreel-form .text-fields {
+      display: grid;
+      grid-gap: 0.5rem;
+      margin-bottom: 1.2rem; }
+      #create-showreel .create-showreel .create-showreel-form .text-fields .text-input {
+        height: 2.5rem;
+        border: 1px solid;
+        border-radius: 5px; }
+      #create-showreel .create-showreel .create-showreel-form .text-fields .message-input {
+        height: 6rem;
+        border: 1px solid;
+        border-radius: 5px; }
+    #create-showreel .create-showreel .create-showreel-form .btn {
+      height: 3rem;
+      width: 100%;
+      text-align: center;
+      background: #756464;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 0.5rem 1.5rem; }
+
+#create-blog {
+  background: url("../images/background-image.jpg") no-repeat center right/cover;
+  min-height: calc(100vh - 113px);
+  background-attachment: fixed;
+  margin-top: 110px; }
+  #create-blog .create-blog {
+    min-height: 500px;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    margin-bottom: 30px; }
+    #create-blog .create-blog .create-blog-title {
+      display: block;
+      font-size: 2rem;
+      border-bottom: 2px solid black;
+      margin-bottom: 20px; }
+    #create-blog .create-blog .create-blog-info {
+      line-height: 3rem;
+      font-size: 1.5rem; }
+    #create-blog .create-blog .create-blog-form .text-fields {
+      display: grid;
+      grid-gap: 0.5rem;
+      margin-bottom: 1.2rem; }
+      #create-blog .create-blog .create-blog-form .text-fields .text-input {
+        height: 2.5rem;
+        border: 1px solid;
+        border-radius: 5px; }
+      #create-blog .create-blog .create-blog-form .text-fields .message-input {
+        height: 6rem;
+        border: 1px solid;
+        border-radius: 5px; }
+    #create-blog .create-blog .create-blog-form .btn {
+      height: 3rem;
+      width: 100%;
+      text-align: center;
+      background: #756464;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 0.5rem 1.5rem; }
+
+#create-gallery {
+  background: url("../images/background-image.jpg") no-repeat center right/cover;
+  min-height: calc(100vh - 113px);
+  background-attachment: fixed;
+  margin-top: 110px; }
+  #create-gallery .create-gallery {
+    min-height: 500px;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    margin-bottom: 30px; }
+    #create-gallery .create-gallery .create-gallery-title {
+      display: block;
+      font-size: 2rem;
+      border-bottom: 2px solid black;
+      margin-bottom: 20px; }
+    #create-gallery .create-gallery .create-gallery-form .text-fields {
+      margin: 10px 0; }
+      #create-gallery .create-gallery .create-gallery-form .text-fields .type-label {
+        margin: 5px 20px 5px 5px; }
+    #create-gallery .create-gallery .create-gallery-form .btn {
+      margin-top: 20px;
+      height: 3rem;
+      width: 100%;
+      text-align: center;
+      background: #756464;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 0.5rem 1.5rem; }
+
+#table {
+  background: url("../images/background-image.jpg") no-repeat center right/cover;
+  min-height: calc(100vh - 113px);
+  background-attachment: fixed;
+  margin-top: 110px; }
+
+#blog-page {
+  background: url("../images/background-image.jpg") no-repeat center right/cover;
+  min-height: calc(100vh - 113px);
+  background-attachment: fixed;
+  margin-top: 110px; }
+  #blog-page .blog-page {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    margin-bottom: 30px; }
+    #blog-page .blog-page .blog-page-title {
+      display: block;
+      font-size: 3rem;
+      margin-bottom: 20px; }
+    #blog-page .blog-page .blog-page-image {
+      background: url("../images/background-image.jpg") no-repeat center right/cover;
+      width: 100%;
+      height: 500px; }
+    #blog-page .blog-page .blog-page-text {
+      margin: 15px 0; }
+
+@media (max-width: 500px) {
+  #header #main-nav ul li {
+    padding: 0.3rem 0.4rem 0; }
+  #galleries .container {
+    flex-direction: column;
+    margin: 0 30px; }
+    #galleries .container .galleries-mylife {
+      line-height: 200px;
+      height: 200px; }
+    #galleries .container .galleries-media {
+      height: 200px;
+      line-height: 200px; }
+  #about .about .about-content {
+    display: block; }
+    #about .about .about-content .about-image {
+      width: 100%;
+      height: 400px;
+      margin-bottom: 30px; }
+    #about .about .about-content .about-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%; }
+  #contact {
+    background: url("../images/background-image.jpg") no-repeat center right/cover;
+    min-height: calc(100vh - 113px);
+    background-attachment: fixed;
+    margin-top: 110px; }
+    #contact .contact {
+      min-height: 500px;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 30px;
+      margin-bottom: 30px; }
+      #contact .contact .contact-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1rem; }
+  #blog {
+    background: url("../images/background-image.jpg") no-repeat center right/cover;
+    min-height: calc(100vh - 113px);
+    background-attachment: fixed;
+    margin-top: 110px; }
+    #blog .blog {
+      background: rgba(255, 255, 255, 0.85);
+      padding: 30px;
+      margin-bottom: 30px; }
+      #blog .blog .blog-page-title {
+        display: block;
+        font-size: 2rem;
+        border-bottom: 2px solid black;
+        margin-bottom: 20px; }
+      #blog .blog .blog-content {
+        grid-template-columns: 1fr; }
+  #showreel .showreel .showreel-content {
+    grid-template-columns: 1fr; }
+  #login .login {
+    padding: 30px 30px;
+    margin-bottom: 30px; }
+  #admin .admin {
+    padding: 30px 30px;
+    margin-bottom: 30px; } }
